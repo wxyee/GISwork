@@ -23,7 +23,7 @@ namespace WindowsFormsApp8
         {
             if (this.openFileDialog1.ShowDialog()== DialogResult.OK)
             {
-                object objWSHandle = this.axSuperWorkspace1.CtlHandle;//和workspace控件的关联
+                this.axSuperMap1.Connect(this.axSuperWorkspace1.CtlHandle);//和workspace控件的关联
                 this.axSuperWorkspace1.Open(this.openFileDialog1.FileName);//打开工作空间的文件名
                 soDataSources soDss = this.axSuperWorkspace1.Datasources;//获得数据源集合
                
