@@ -39,6 +39,7 @@ namespace WindowsFormsApp8
             this.axSuperTopo1 = new AxSuperTopoLib.AxSuperTopo();
             this.axSuperMap1 = new AxSuperMapLib.AxSuperMap();
             this.axSuperLegend1 = new AxSuperLegendLib.AxSuperLegend();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axSuperWorkspace1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axSuperWkspManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axSuperTopo1)).BeginInit();
@@ -48,7 +49,7 @@ namespace WindowsFormsApp8
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(418, 29);
+            this.button1.Location = new System.Drawing.Point(559, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 42);
             this.button1.TabIndex = 0;
@@ -59,7 +60,7 @@ namespace WindowsFormsApp8
             // axSuperWorkspace1
             // 
             this.axSuperWorkspace1.Enabled = true;
-            this.axSuperWorkspace1.Location = new System.Drawing.Point(723, 294);
+            this.axSuperWorkspace1.Location = new System.Drawing.Point(773, 282);
             this.axSuperWorkspace1.Name = "axSuperWorkspace1";
             this.axSuperWorkspace1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axSuperWorkspace1.OcxState")));
             this.axSuperWorkspace1.Size = new System.Drawing.Size(32, 32);
@@ -68,9 +69,9 @@ namespace WindowsFormsApp8
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(418, 124);
+            this.button2.Location = new System.Drawing.Point(470, 75);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 23);
+            this.button2.Size = new System.Drawing.Size(160, 43);
             this.button2.TabIndex = 2;
             this.button2.Text = "打开工作空间";
             this.button2.UseVisualStyleBackColor = true;
@@ -78,9 +79,9 @@ namespace WindowsFormsApp8
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(418, 184);
+            this.button3.Location = new System.Drawing.Point(647, 75);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 23);
+            this.button3.Size = new System.Drawing.Size(158, 43);
             this.button3.TabIndex = 3;
             this.button3.Text = "关闭工作空间";
             this.button3.UseVisualStyleBackColor = true;
@@ -96,14 +97,15 @@ namespace WindowsFormsApp8
             this.axSuperWkspManager1.Location = new System.Drawing.Point(12, 1);
             this.axSuperWkspManager1.Name = "axSuperWkspManager1";
             this.axSuperWkspManager1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axSuperWkspManager1.OcxState")));
-            this.axSuperWkspManager1.Size = new System.Drawing.Size(385, 287);
+            this.axSuperWkspManager1.Size = new System.Drawing.Size(244, 233);
             this.axSuperWkspManager1.TabIndex = 4;
             this.axSuperWkspManager1.LClick += new AxSuperWkspManagerLib._DSuperWkspManagerEvents_LClickEventHandler(this.axSuperWkspManager1_LClick);
+            this.axSuperWkspManager1.LDbClick += new AxSuperWkspManagerLib._DSuperWkspManagerEvents_LDbClickEventHandler(this.axSuperWkspManager1_LDbClick);
             // 
             // axSuperTopo1
             // 
             this.axSuperTopo1.Enabled = true;
-            this.axSuperTopo1.Location = new System.Drawing.Point(670, 294);
+            this.axSuperTopo1.Location = new System.Drawing.Point(773, 347);
             this.axSuperTopo1.Name = "axSuperTopo1";
             this.axSuperTopo1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axSuperTopo1.OcxState")));
             this.axSuperTopo1.Size = new System.Drawing.Size(32, 32);
@@ -112,27 +114,40 @@ namespace WindowsFormsApp8
             // axSuperMap1
             // 
             this.axSuperMap1.Enabled = true;
-            this.axSuperMap1.Location = new System.Drawing.Point(12, 294);
+            this.axSuperMap1.Location = new System.Drawing.Point(291, 124);
             this.axSuperMap1.Name = "axSuperMap1";
             this.axSuperMap1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axSuperMap1.OcxState")));
-            this.axSuperMap1.Size = new System.Drawing.Size(303, 167);
+            this.axSuperMap1.Size = new System.Drawing.Size(440, 327);
             this.axSuperMap1.TabIndex = 6;
+            this.axSuperMap1.DblClick += new System.EventHandler(this.axSuperMap1_DblClick);
             // 
             // axSuperLegend1
             // 
             this.axSuperLegend1.Enabled = true;
-            this.axSuperLegend1.Location = new System.Drawing.Point(321, 294);
+            this.axSuperLegend1.Location = new System.Drawing.Point(12, 250);
             this.axSuperLegend1.Name = "axSuperLegend1";
             this.axSuperLegend1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axSuperLegend1.OcxState")));
-            this.axSuperLegend1.Size = new System.Drawing.Size(304, 167);
+            this.axSuperLegend1.Size = new System.Drawing.Size(254, 185);
             this.axSuperLegend1.TabIndex = 7;
+            this.axSuperLegend1.DblClick += new System.EventHandler(this.axSuperLegend1_DblClick);
             this.axSuperLegend1.Modified += new System.EventHandler(this.axSuperLegend1_Modified);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(444, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(97, 42);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "量算距离";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 473);
+            this.ClientSize = new System.Drawing.Size(888, 511);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.axSuperLegend1);
             this.Controls.Add(this.axSuperMap1);
             this.Controls.Add(this.axSuperTopo1);
@@ -163,6 +178,7 @@ namespace WindowsFormsApp8
         private AxSuperTopoLib.AxSuperTopo axSuperTopo1;
         private AxSuperMapLib.AxSuperMap axSuperMap1;
         private AxSuperLegendLib.AxSuperLegend axSuperLegend1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
